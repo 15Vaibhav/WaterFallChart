@@ -1,0 +1,164 @@
+{
+    "dataRoles": [
+        {
+            "displayName": "Categories",
+            "name": "category",
+            "kind": "Grouping"
+        },
+        {
+            "displayName": "Values",
+            "name": "measure_1",
+            "kind": "Measure"
+        },
+        {
+            "displayName": "Growth",
+            "name": "measure_2",
+            "kind": "Measure"
+        }
+
+    ],
+    "objects": {
+        "Arc": {
+            "displayName": "Custom Style",
+            "properties": {
+                "total_rect": {
+                    "displayName": "total_rect",
+                    "description": "The fill color of the rect.",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "small_rect_postive": {
+                    "displayName": "small_rect_postive",
+                    "description": "The fill color of the rect.",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "small_rect_negative": {
+                    "displayName": "small_rect_negative",
+                    "description": "The fill color of the rect.",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "text_postive": {
+                    "displayName": "text postive",
+                    "description": "The fill color of the rect.",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "text_negative": {
+                    "displayName": "text negative",
+                    "description": "The fill color of the rect.",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "text_black": {
+                    "displayName": "Text Black ",
+                    "description": "The fill color of the rect.",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "text_white": {
+                    "displayName": "Text white ",
+                    "description": "The fill color of the rect.",
+                    "type": {
+                        "fill": {
+                            "solid": {
+                                "color": true
+                            }
+                        }
+                    }
+                },
+                "axis_text_size": {
+                    "displayName": "axis text",
+                    "description": "Size of axis text",
+                    "type": {
+                        "numeric":true
+                    }
+                },
+               
+                "total_rect_text": {
+                    "displayName": "total_rect_text",
+                    "description": "Rotation of axis text",
+                    "type": {
+                        "numeric":true
+                    }
+                },
+                               
+                "growth_chart_text": {
+                    "displayName": "Growth Rect Text",
+                    "description": "Rotation of axis text",
+                    "type": {
+                        "numeric":true
+                    }
+                },
+                "volume_rect_text": {
+                    "displayName": "Volume Rect Text",
+                    "description": "Rotation of axis text",
+                    "type": {
+                        "numeric":true
+                    }
+                }
+
+
+            }
+        }
+    },
+    "dataViewMappings": [
+        {
+            "categorical": {
+                "categories": {
+                    "for": {
+                        "in": "category"
+                    },
+                    "dataReductionAlgorithm": {
+                        "top": {}
+                    }
+                },
+                "values": {
+                    "select": [
+                        {
+                            "bind": {
+                                "to": "measure_1"
+                            }
+                        },
+                        {
+                            "bind": {
+                                "to": "measure_2"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}
